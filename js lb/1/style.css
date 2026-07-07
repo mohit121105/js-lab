@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#homepageSection, #studentSection {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90vw;
+    box-sizing: border-box;
+    border-top: 5px solid #a81c1c;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #a81c1c;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #a81c1c;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #a81c1c;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #dddddd;
+    margin: 25px 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444444;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #a81c1c;
+    outline: none;
+}
+
+button {
+    background-color: #a81c1c;
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #821515;
+}
+
+#studentForm p {
+    margin-bottom: 20px;
+}
+
+#studentSection button:last-child {
+    background-color: #666666;
+    margin-top: 15px;
+}
+
+#studentSection button:last-child:hover {
+    background-color: #444444;
+}
+
+@media (max-width: 600px) {
+    #homepageSection, #studentSection {
+        padding: 20px;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; }
+    h3 { font-size: 1.3rem; }
+}

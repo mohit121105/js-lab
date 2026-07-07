@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - SIT Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="studentSection">
+        <h2>Student Details</h2>
+        <hr>
+        <form id="studentForm" onsubmit="event.preventDefault(); greet();">
+            <p>
+                <label for="studentName">Name: </label>
+                <input type="text" id="studentName" required>
+            </p>
+            <p>
+                <label for="studentRoll">Roll No: </label>
+                <input type="text" id="studentRoll" required>
+            </p>
+            <p>
+                <label for="studentBranch">Branch: </label>
+                <select id="studentBranch" required>
+                    <option value="" disabled selected>Select your branch</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Electronics & Telecommunication">Electronics & Telecommunication</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </select>
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+
+        <br>
+        <hr>
+        <button onclick="window.location.href='index.html';">Back to Homepage</button>
+    </div>
+
+    <script src="greet.js"></script>
+</body>
+</html>
