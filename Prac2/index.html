@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Billing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Billing Calculator</h1>
+
+    <label>Customer Name:</label><br>
+    <input type="text" id="name"><br>
+
+    <label>Product Name:</label><br>
+    <input type="text" id="product"><br>
+
+    <label>Price per Item:</label><br>
+    <input type="number" id="price"><br>
+
+    <label>Quantity:</label><br>
+    <input type="number" id="quantity"><br>
+
+    <button onclick="calculateBill()">Generate Bill</button>
+
+    <hr>
+
+    <div id="output"></div>
+
+    <div class="footer">
+        Designed by Mohit, PRN: 24070521044
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
