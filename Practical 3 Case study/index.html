@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+LOGIN
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Student Login</h2>
+
+<form id="loginForm">
+
+<div class="input-group">
+<label>PRN Number</label>
+<input type="text" id="prn" placeholder="Enter PRN Number">
+<small id="prnError"></small>
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" id="email" placeholder="Enter Email Address">
+<small id="emailError"></small>
+</div>
+
+<div class="input-group">
+<label>Batch</label>
+
+<select id="batch">
+<option value="">Select Batch</option>
+<option>2023 - 2027</option>
+<option>2024 - 2028</option>
+<option>2025 - 2029</option>
+<option>2026 - 2030</option>
+<option>2027 - 2031</option>
+</select>
+
+<small id="batchError"></small>
+
+</div>
+
+<div class="input-group">
+<label>Username</label>
+<input type="text" id="username" placeholder="Enter Username">
+<small id="userError"></small>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" id="password" placeholder="Enter Password">
+<small id="passError"></small>
+
+<div id="strength"></div>
+
+</div>
+
+<button type="submit">
+Login
+</button>
+
+<p id="success"></p>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

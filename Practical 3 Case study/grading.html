@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="grading.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        GRADING SYSTEM
+    </div>
+
+    <div class="student">
+        Student Dashboard
+    </div>
+
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Subject Wise Grading</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Mathematics</td>
+                    <td>
+                        <input type="number" id="math" min="0" max="100" placeholder="0-100">
+                    </td>
+                    <td id="g1">-</td>
+                </tr>
+
+                <tr>
+                    <td>Physics</td>
+                    <td>
+                        <input type="number" id="physics" min="0" max="100" placeholder="0-100">
+                    </td>
+                    <td id="g2">-</td>
+                </tr>
+
+                <tr>
+                    <td>Chemistry</td>
+                    <td>
+                        <input type="number" id="chemistry" min="0" max="100" placeholder="0-100">
+                    </td>
+                    <td id="g3">-</td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td>
+                        <input type="number" id="english" min="0" max="100" placeholder="0-100">
+                    </td>
+                    <td id="g4">-</td>
+                </tr>
+
+                <tr>
+                    <td>Computer Science</td>
+                    <td>
+                        <input type="number" id="computer" min="0" max="100" placeholder="0-100">
+                    </td>
+                    <td id="g5">-</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <div class="buttons">
+
+            <button onclick="calculateGrades()">
+                Calculate Grades
+            </button>
+
+            <button class="reset" onclick="resetForm()">
+                Reset
+            </button>
+
+        </div>
+
+        <div class="result">
+
+            <h3>Result Summary</h3>
+
+            <p>
+                Average Marks :
+                <span id="average">0</span>
+            </p>
+
+            <p>
+                Overall Grade :
+                <span id="overallGrade">-</span>
+            </p>
+
+            <p>
+                Result :
+                <span id="result">-</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="grading.js"></script>
+
+</body>
+</html>
