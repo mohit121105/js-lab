@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohit Shopping Mart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🛒Shopping Mart</h1>
+    <p>Your One Stop Shopping Destination</p>
+</header>
+
+<main class="container">
+
+<div class="shopping">
+
+<h2>Shopping Details</h2>
+
+<label>Customer Name</label>
+<input type="text" id="customer" placeholder="Enter Customer Name">
+
+<label>Category</label>
+
+<select id="category" onchange="loadProducts()">
+<option value="">Select Category</option>
+<option value="Electronics">Electronics</option>
+<option value="Fashion">Fashion</option>
+<option value="Grocery">Grocery</option>
+<option value="Books">Books</option>
+<option value="Home">Home Appliances</option>
+</select>
+
+<label>Product</label>
+
+<select id="product" onchange="showPrice()">
+<option>Select Product</option>
+</select>
+
+<label>Price (₹)</label>
+<input type="text" id="price" readonly>
+
+<label>Quantity</label>
+<input type="number" id="quantity" min="1" value="1">
+
+<button onclick="generateBill()">Generate Bill</button>
+
+</div>
+
+<div class="bill">
+
+<h2>Invoice</h2>
+
+<div id="output">
+<p>Your bill will appear here.</p>
+</div>
+
+</div>
+
+</main>
+
+<footer>
+Designed by Mohit | PRN : 24070521044
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
