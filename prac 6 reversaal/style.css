@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dfe9f3, #f5f7fa);
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.student-info {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: right;
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #374151;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2563eb;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.result-label {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.result-box {
+  min-height: 50px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  color: #111827;
+  font-size: 18px;
+  word-wrap: break-word;
+}

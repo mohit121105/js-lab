@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Gym with a membership plan that fits your routine.">
+  <title>Gym | Membership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="intro-panel" aria-labelledby="page-title">
+      <p class="eyebrow">GYM MEMBERSHIP</p>
+      <h1 id="page-title">Build a stronger routine.</h1>
+      <p class="intro-copy">Choose a simple plan and start training with us today.</p>
+      <div class="benefits" aria-label="Membership benefits">
+        <div class="benefit-item">
+          <span class="benefit-icon" aria-hidden="true">01</span>
+          <span>Premium equipment</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon" aria-hidden="true">02</span>
+          <span>Flexible membership</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon" aria-hidden="true">03</span>
+          <span>Community that motivates</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-panel" aria-labelledby="form-title">
+      <div class="form-heading">
+        <p class="eyebrow">Start today</p>
+        <h2 id="form-title">Create your membership</h2>
+        <p>Enter your details and choose the rhythm that works for you.</p>
+      </div>
+
+      <form id="membership-form" novalidate>
+        <div class="field-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Alex Morgan" autocomplete="name" required minlength="2">
+          <span class="error-message" id="name-error"></span>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="18" min="16" max="60" inputmode="numeric" required>
+            <span class="hint">Members must be 16–60</span>
+            <span class="error-message" id="age-error"></span>
+          </div>
+          <div class="field-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required>
+            <span class="error-message" id="phone-error"></span>
+          </div>
+        </div>
+
+        <div class="field-row email-row">
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="field-group">
+            <label for="blood-group">Blood group</label>
+            <div class="select-wrap">
+              <select id="blood-group" name="bloodGroup" required>
+                <option value="" disabled selected>Select blood group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+            <span class="error-message" id="bloodGroup-error"></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="plan">Membership plan</label>
+          <div class="select-wrap">
+            <select id="plan" name="plan" required>
+              <option value="" disabled selected>Select a plan</option>
+              <option value="monthly">Monthly — ₹1,499 / month</option>
+              <option value="quarterly">Quarterly — ₹3,999 / 3 months</option>
+              <option value="yearly">Yearly — ₹12,999 / year</option>
+            </select>
+          </div>
+          <span class="error-message" id="plan-error"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="admission-date">Date of admission</label>
+          <input type="date" id="admission-date" name="admissionDate" required>
+          <span class="error-message" id="admissionDate-error"></span>
+        </div>
+        
+          <div class="terms-group">
+            <label class="terms-label" for="terms">
+              <input type="checkbox" id="terms" name="terms" required>
+              <span>I agree to the Terms and Conditions, membership rules, and privacy policy.</span>
+            </label>
+            <span class="error-message" id="terms-error"></span>
+          </div>
+
+        <button type="submit" class="submit-button">
+          <span>Join Gym</span>
+          <span class="arrow" aria-hidden="true">&#8594;</span>
+        </button>
+        <p class="form-note">No setup fees. Change or cancel your plan anytime.</p>
+        <p class="success-message" id="success-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <aside class="student-details" aria-label="Student details">
+    <div>Name :- Mohit Lilhare</div>
+    <div>PRN :- 24070521044</div>
+    <div>Batch :- A2</div>
+  </aside>
+  <script src="script.js"></script>
+</body>
+</html>

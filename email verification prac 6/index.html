@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+
+            <div class="logo">Verification Page</div>
+
+            <h2>Create an account</h2>
+
+            <p>Sign up to see your data.</p>
+
+            <form id="signupForm">
+
+                <div class="name-fields">
+                    <input
+                        type="text"
+                        id="firstName"
+                        placeholder="First name"
+                        autocomplete="given-name"
+                    >
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        placeholder="Last name"
+                        autocomplete="family-name"
+                    >
+                </div>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    autocomplete="email"
+                >
+
+                <div class="password-box">
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        autocomplete="new-password"
+                    >
+                    <button type="button" id="showPassword">Show</button>
+                </div>
+
+                <div class="password-criteria">
+                    <div>Password must contain:</div>
+                    <div id="length">✕ At least 8 characters</div>
+                    <div id="uppercase">✕ One uppercase letter</div>
+                    <div id="lowercase">✕ One lowercase letter</div>
+                    <div id="number">✕ One number</div>
+                    <div id="special">✕ One special character</div>
+                </div>
+
+                <div class="dob">
+                    <label for="dob">Date of birth</label>
+                    <input type="date" id="dob">
+                </div>
+
+                <div class="gender">
+                    <label>Gender</label>
+
+                    <div class="gender-options">
+                        <label>
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Other">
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="signup-btn">
+                    Sign Up
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+            <div id="verifiedInfo" class="verified-info" hidden>
+                <h3>Verified Account Information</h3>
+
+                <div class="info-row">
+                    <span>First Name</span>
+                    <strong id="displayFirstName"></strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Last Name</span>
+                    <strong id="displayLastName"></strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Email</span>
+                    <strong id="displayEmail"></strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Date of Birth</span>
+                    <strong id="displayDob"></strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Gender</span>
+                    <strong id="displayGender"></strong>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            © 2026 Javascript Assignment. All rights reserved.
+        </div>
+    </div>
+
+    <div class="student-info">
+        <div>Mohit Lilhare</div>
+        <div>PRN 24070521044</div>
+        <div>Batch A2</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

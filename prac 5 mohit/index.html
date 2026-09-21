@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Total Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Cart Total Calculator</h2>
+
+    <div class="form">
+        <input type="text" id="itemName" placeholder="Item Name">
+        <input type="number" id="price" placeholder="Price">
+        <input type="number" id="quantity" placeholder="Quantity">
+        <button onclick="addItem()">Add Item</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="cartBody"></tbody>
+    </table>
+
+    <div class="summary">
+        <p>Subtotal: <span id="subtotal">₹0</span></p>
+        <p>Discount: <span id="discount">₹0</span></p>
+        <h3>Final Total: <span id="finalTotal">₹0</span></h3>
+    </div>
+
+    <div class="buttons">
+        <button onclick="calculateCart()">Calculate Total</button>
+        <button class="clear" onclick="clearCart()">Clear Cart</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concert Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <h1>Concert</h1>
+        <p>Register to unlock your concert ticket booking experience.</p>
+      </div>
+
+      <div class="student-footer">
+        <div><strong>Name :-</strong> Mohit Lilhare</div>
+        <div><strong>PRN :-</strong> 24070521044</div>
+        <div><strong>Batch :-</strong> A2</div>
+      </div>
+
+      <div class="form-wrapper">
+        <section id="registrationStep" class="step active">
+          <form id="registrationForm" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required />
+              </div>
+
+              <div class="field">
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" placeholder="Your city" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="age">Age</label>
+                <input id="age" name="age" type="number" min="10" max="100" placeholder="25" required />
+              </div>
+
+              <div class="field">
+                <label for="genre">Favorite Genre</label>
+                <select id="genre" name="genre" required>
+                  <option value="">Select genre</option>
+                  <option>Rock</option>
+                  <option>Pop</option>
+                  <option>Jazz</option>
+                  <option>Electronic</option>
+                  <option>Classical</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="notes">Event Notes</label>
+              <textarea id="notes" name="notes" placeholder="Anything you want us to know?"></textarea>
+            </div>
+
+            <div id="registrationError" class="error-box" aria-live="polite"></div>
+            <div id="registrationSuccess" class="success-box" aria-live="polite"></div>
+            <div class="btn-group">
+              <button type="submit" class="primary-btn">Register</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

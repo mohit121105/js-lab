@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gym Admission Registration</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="page-shell">
+		<section class="form-panel" aria-labelledby="form-title">
+			<div class="form-heading">
+				<div>
+					<h1 id="form-title">Gym Admission Registration</h1>
+					<p class="section-label">Please fill in the details below.</p>
+				</div>
+				<span class="required-note"><span aria-hidden="true">*</span> Required</span>
+			</div>
+			<form id="admission-form" novalidate>
+				<div class="form-grid">
+					<div class="field field-wide">
+						<label for="full-name">Full name <span aria-hidden="true">*</span></label>
+						<input type="text" id="full-name" name="fullName" placeholder="e.g. Alex Morgan" autocomplete="name" required>
+						<small class="error-message" id="full-name-error"></small>
+					</div>
+
+					<div class="field">
+						<label for="email">Email address <span aria-hidden="true">*</span></label>
+						<input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+						<small class="error-message" id="email-error"></small>
+					</div>
+
+					<div class="field">
+						<label for="phone">Phone number <span aria-hidden="true">*</span></label>
+						<input type="tel" id="phone" name="phone" placeholder="10-digit number" autocomplete="tel" required>
+						<small class="error-message" id="phone-error"></small>
+					</div>
+
+					<fieldset class="field choice-field">
+						<legend>Gender <span aria-hidden="true">*</span></legend>
+						<div class="choice-row">
+							<label class="choice"><input type="radio" name="gender" value="Female" required><span>Female</span></label>
+							<label class="choice"><input type="radio" name="gender" value="Male"><span>Male</span></label>
+							<label class="choice"><input type="radio" name="gender" value="Other"><span>Other</span></label>
+						</div>
+						<small class="error-message" id="gender-error"></small>
+					</fieldset>
+
+					<div class="field">
+						<label for="age">Age <span aria-hidden="true">*</span></label>
+						<input type="number" id="age" name="age" min="16" max="80" placeholder="16 - 80" required>
+						<small class="error-message" id="age-error"></small>
+					</div>
+
+					<div class="field">
+						<label for="membership">Membership type <span aria-hidden="true">*</span></label>
+						<select id="membership" name="membership" required>
+							<option value="">Choose a plan</option>
+							<option value="Monthly">Monthly - ₹1,500</option>
+							<option value="Quarterly">Quarterly - ₹4,000</option>
+							<option value="Annual">Annual - ₹12,000</option>
+						</select>
+						<small class="error-message" id="membership-error"></small>
+					</div>
+
+					<div class="field field-wide">
+						<label for="goals">Fitness goals</label>
+						<textarea id="goals" name="goals" rows="3" placeholder="Tell us what you would like to work on..."></textarea>
+						<small class="error-message" id="goals-error"></small>
+					</div>
+				</div>
+
+				<label class="terms-check">
+					<input type="checkbox" id="terms" name="terms" required>
+					<span>I agree to the gym rules and membership terms. <span aria-hidden="true">*</span></span>
+				</label>
+				<small class="error-message terms-error" id="terms-error"></small>
+
+				<div class="form-footer">
+					<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+					<button type="submit">Submit application <span aria-hidden="true">→</span></button>
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<aside class="student-details" aria-label="Student details">
+		<p><span>Name</span> Mohit Lilhare</p>
+		<p><span>PRN</span> 24070521044</p>
+		<p><span>Batch</span> A2</p>
+	</aside>
+
+	<script src="script.js"></script>
+</body>
+</html>

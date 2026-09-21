@@ -1,0 +1,128 @@
+:root {
+  --page: #eef1f4;
+  --surface: #ffffff;
+  --ink: #24313d;
+  --muted: #68737d;
+  --line: #d5dce2;
+  --accent: #356d9f;
+  --accent-dark: #285579;
+  --soft-accent: #eaf2f9;
+}
+
+[data-theme="dark"] {
+  --page: #202830;
+  --surface: #2b3640;
+  --ink: #f1f4f6;
+  --muted: #b5c0c9;
+  --line: #53616d;
+  --accent: #76add8;
+  --accent-dark: #a5cbe6;
+  --soft-accent: #354b5c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--page);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.student-info {
+  position: fixed;
+  right: 20px;
+  bottom: 16px;
+  display: flex;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 560px);
+  width: min(850px, calc(100% - 32px));
+  min-height: 560px;
+  margin: 40px auto;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  color: #ffffff;
+  background: #356d9f;
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 32px;
+  place-items: center;
+  color: #356d9f;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.step-label {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h1, h2 { margin: 0; line-height: 1.2; }
+h1 { font-size: 30px; }
+h2 { font-size: 28px; }
+
+.content-panel { display: flex; align-items: center; padding: 48px; }
+.view { width: 100%; }
+.theme-options { display: grid; gap: 10px; }
+.theme-card { display: grid; grid-template-columns: 42px 1fr 16px; align-items: center; gap: 12px; width: 100%; padding: 10px; color: var(--ink); text-align: left; background: var(--surface); border: 1px solid var(--line); }
+.theme-card:hover, .theme-card.selected { background: var(--soft-accent); border-color: var(--accent); }
+.theme-card strong, .theme-card small { display: block; }
+.theme-card strong { font-size: 14px; }
+.theme-card small { margin-top: 3px; color: var(--muted); font-size: 12px; }
+.theme-preview { display: flex; align-items: flex-end; justify-content: flex-end; height: 34px; padding: 4px; border: 1px solid var(--line); }
+.theme-preview span { display: block; width: 13px; height: 13px; background: var(--accent); }
+.light-preview { background: #ffffff; }
+.dark-preview { background: #2b3640; }
+.radio-dot { width: 14px; height: 14px; border: 1px solid var(--line); border-radius: 50%; }
+.selected .radio-dot { border: 4px solid var(--accent); }
+.action-row { display: flex; align-items: center; gap: 18px; margin-top: 24px; }
+.primary-button { padding: 11px 16px; color: #ffffff; background: var(--accent); border: 0; font-size: 13px; }
+.primary-button:hover:not(:disabled) { background: var(--accent-dark); }
+.primary-button:disabled { cursor: not-allowed; opacity: 0.5; }
+.primary-button span { margin-left: 10px; }
+.text-button, .back-button { padding: 0; color: var(--muted); background: none; border: 0; font-size: 12px; text-decoration: underline; }
+.text-button:hover, .back-button:hover { color: var(--accent); }
+.status-message { min-height: 18px; margin: 12px 0 0; color: var(--accent-dark); font-size: 12px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 12px; }
+label { display: grid; gap: 6px; color: var(--muted); font-size: 11px; text-transform: uppercase; }
+input, select { width: 100%; padding: 9px 8px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); outline: none; }
+input:focus, select:focus { border-color: var(--accent); }
+.submit-button { margin-top: 26px; }
+.back-button { margin-top: 20px; text-decoration: none; }
+
+@media (max-width: 700px) {
+  .app-shell { grid-template-columns: 1fr; width: min(100% - 20px, 560px); min-height: auto; margin: 10px auto; }
+  .hero-panel { padding: 24px; }
+  .brand-mark { margin-bottom: 24px; }
+  .content-panel { padding: 32px 24px 40px; }
+}
+@media (max-width: 430px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .action-row { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .student-info { right: 12px; bottom: 10px; flex-direction: column; align-items: flex-end; gap: 2px; }
+}

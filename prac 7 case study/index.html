@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create your account</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="page">
+		<section class="intro" aria-labelledby="page-title">
+			<h1 id="page-title">Login</h1>
+		</section>
+
+		<section class="form-side" aria-labelledby="form-title">
+			<div class="form-wrap">
+				<header class="form-heading">
+					<h2 id="form-title">Create your account</h2>
+					<p>All fields are required unless marked otherwise.</p>
+				</header>
+
+				<form id="signup-form" novalidate>
+					<div class="name-row">
+						<label for="first-name">First name
+							<input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+						</label>
+						<label for="last-name">Last name
+							<input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+						</label>
+					</div>
+
+					<div class="split-row">
+						<label for="birthday">Birthday
+							<input id="birthday" name="birthday" type="date" autocomplete="bday" required>
+						</label>
+						<label for="username">Username
+							<input id="username" name="username" type="text" autocomplete="username" required>
+						</label>
+					</div>
+
+					<label for="email">Email address
+						<input id="email" name="email" type="email" autocomplete="email" required>
+					</label>
+
+					<label for="website">Website
+						<input id="website" name="website" type="url" placeholder="https://example.com" autocomplete="url" required>
+					</label>
+
+					<div class="split-row">
+						<label for="password">Password
+							<input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+						</label>
+						<label for="confirm-password">Re-enter password
+							<input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required>
+						</label>
+					</div>
+
+					<label class="terms" for="terms">
+						<input id="terms" name="terms" type="checkbox" required>
+						<span>I agree to the <a href="#terms-and-conditions">terms and conditions</a>.</span>
+					</label>
+
+					<p id="form-status" class="status" role="status" aria-live="polite"></p>
+					<button type="submit">Create account</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<aside class="student-info" aria-label="Student information">
+		<div>Name :- Mohit Lilhare</div>
+		<div>PRN :- 24070521044</div>
+		<div>Batch :- A2</div>
+	</aside>
+
+	<script src="script.js"></script>
+</body>
+</html>

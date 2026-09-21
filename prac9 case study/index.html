@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="content">
+        <h1>Schedule Planner</h1>
+
+        <div class="planner-controls">
+          <button id="reset-schedule" type="button">Reset schedule</button>
+        </div>
+
+        <div class="table-frame">
+          <table class="schedule-table" aria-label="Seminar schedule planner">
+            <thead>
+              <tr class="head-row">
+                <th colspan="4" class="seminar-heading">Seminar</th>
+              </tr>
+              <tr class="subhead-row">
+                <th>Day</th>
+                <th colspan="2">Schedule</th>
+                <th>Topic</th>
+              </tr>
+              <tr class="schedule-labels">
+                <th></th>
+                <th>Begin</th>
+                <th>End</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr data-day="Monday" data-begin="8:00 a.m." data-end="5:00 p.m." data-topic="Introduction to XML">
+                <td class="day-cell">Monday</td>
+                <td class="schedule-cell green">8:00 a.m.</td>
+                <td class="schedule-cell purple">5:00 p.m.</td>
+                <td class="topic-cell">Introduction to XML</td>
+                <td class="action-cell">
+                  <button class="insert-btn" type="button">Insert</button>
+                  <button class="delete-btn" type="button">Delete</button>
+                </td>
+              </tr>
+
+              <tr data-day="Tuesday" data-begin="8:00 a.m." data-end="11:00 a.m." data-topic="Validity: DTD and Relax NG">
+                <td class="day-cell">Tuesday</td>
+                <td class="schedule-cell green">8:00 a.m.</td>
+                <td class="schedule-cell purple">11:00 a.m.</td>
+                <td class="topic-cell">Validity: DTD and Relax NG</td>
+                <td class="action-cell">
+                  <button class="insert-btn" type="button">Insert</button>
+                  <button class="delete-btn" type="button">Delete</button>
+                </td>
+              </tr>
+
+              <tr data-day="Tuesday" data-begin="11:00 a.m." data-end="2:00 p.m." data-topic="XPath">
+                <td class="day-cell">Tuesday</td>
+                <td class="schedule-cell green">11:00 a.m.</td>
+                <td class="schedule-cell purple">2:00 p.m.</td>
+                <td class="topic-cell">XPath</td>
+                <td class="action-cell">
+                  <button class="insert-btn" type="button">Insert</button>
+                  <button class="delete-btn" type="button">Delete</button>
+                </td>
+              </tr>
+
+              <tr data-day="Tuesday" data-begin="2:00 p.m." data-end="5:00 p.m." data-topic="XSL Transformations">
+                <td class="day-cell">Tuesday</td>
+                <td class="schedule-cell green">2:00 p.m.</td>
+                <td class="schedule-cell purple">5:00 p.m.</td>
+                <td class="topic-cell">XSL Transformations</td>
+                <td class="action-cell">
+                  <button class="insert-btn" type="button">Insert</button>
+                  <button class="delete-btn" type="button">Delete</button>
+                </td>
+              </tr>
+
+              <tr data-day="Wednesday" data-begin="8:00 a.m." data-end="12:00 p.m." data-topic="XSL Formatting Objects">
+                <td class="day-cell">Wednesday</td>
+                <td class="schedule-cell green">8:00 a.m.</td>
+                <td class="schedule-cell purple">12:00 p.m.</td>
+                <td class="topic-cell">XSL Formatting Objects</td>
+                <td class="action-cell">
+                  <button class="insert-btn" type="button">Insert</button>
+                  <button class="delete-btn" type="button">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p>Name: Mohit Lilhare</p>
+        <p>PRN: 24070521044</p>
+        <p>Batch: A2</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

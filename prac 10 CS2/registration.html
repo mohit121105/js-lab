@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Workshop Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <h1>Technical Workshop</h1>
+        <p>Register and reserve your seat for the upcoming hands-on technical session.</p>
+      </div>
+
+      <div class="student-footer">
+        <div><strong>Name :-</strong> Mohit Lilhare</div>
+        <div><strong>PRN :-</strong> 24070521044</div>
+        <div><strong>Batch :-</strong> A2</div>
+      </div>
+
+      <div class="form-wrapper">
+        <form id="workshopForm" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required />
+            </div>
+
+            <div class="field">
+              <label for="college">College / Institute</label>
+              <input id="college" name="college" type="text" placeholder="College name" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="course">Course</label>
+              <input id="course" name="course" type="text" placeholder="B.Tech / BCA / etc" required />
+            </div>
+
+            <div class="field">
+              <label for="year">Year</label>
+              <select id="year" name="year" required>
+                <option value="">Select year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="track">Workshop Track</label>
+              <select id="track" name="track" required>
+                <option value="">Select track</option>
+                <option>Web Development</option>
+                <option>AI & ML</option>
+                <option>Cyber Security</option>
+                <option>Data Science</option>
+                <option>Cloud Computing</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="experience">Experience Level</label>
+              <select id="experience" name="experience" required>
+                <option value="">Select level</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="workshopDate">Workshop Date</label>
+              <input id="workshopDate" name="workshopDate" type="date" required />
+            </div>
+
+            <div class="field">
+              <label for="ticketType">Pass Type</label>
+              <select id="ticketType" name="ticketType" required>
+                <option value="">Select pass</option>
+                <option>Standard</option>
+                <option>Premium</option>
+                <option>VIP</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="quantity">Participants</label>
+              <input id="quantity" name="quantity" type="number" min="1" max="10" value="1" required />
+            </div>
+
+            <div class="field">
+              <label for="mode">Mode</label>
+              <select id="mode" name="mode" required>
+                <option value="">Select mode</option>
+                <option>Offline</option>
+                <option>Online</option>
+                <option>Hybrid</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="promoCode">Promo Code</label>
+            <input id="promoCode" name="promoCode" type="text" placeholder="Optional" />
+          </div>
+
+          <div class="field">
+            <label for="message">Why do you want to join this workshop?</label>
+            <textarea id="message" name="message" placeholder="Tell us about your interest..."></textarea>
+          </div>
+
+          <div class="field checkbox-row">
+            <label class="check-label" for="terms">
+              <input id="terms" name="terms" type="checkbox" required />
+              <span>I agree to the workshop terms and fee policy.</span>
+            </label>
+          </div>
+
+          <div id="registrationError" class="error-box" aria-live="polite"></div>
+          <div id="registrationSuccess" class="success-box" aria-live="polite"></div>
+
+          <div class="btn-group">
+            <button type="submit" class="primary-btn">Register & Book Ticket</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

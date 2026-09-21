@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="logo">Regex Extractor</div>
+
+        <h2>Student Information Extraction</h2>
+
+        <p>
+            Enter student information in paragraph format.
+            The required information will be extracted using regular expressions.
+        </p>
+
+        <textarea
+            id="inputText"
+            placeholder="Example: My name is Mohit Lilhare. I am studying in the Computer Science department. You can contact me at mohit@gmail.com or on 9876543210."
+        ></textarea>
+
+        <button type="button" id="processBtn">
+            Extract Information
+        </button>
+
+        <div id="message"></div>
+
+        <div id="results" class="results hidden">
+
+            <h3>Extracted Information</h3>
+
+            <div class="result-row">
+                <span>Student Name</span>
+                <strong id="studentName">Not found</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Email Address</span>
+                <strong id="emailAddress">Not found</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Email Status</span>
+                <strong id="emailStatus">Not checked</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Phone Number</span>
+                <strong id="phoneNumber">Not found</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Phone Status</span>
+                <strong id="phoneStatus">Not checked</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Department</span>
+                <strong id="department">Not found</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Total Number of Words</span>
+                <strong id="wordCount">0</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Total Characters (excluding spaces)</span>
+                <strong id="charCount">0</strong>
+            </div>
+
+            <div class="replacement-box">
+
+                <h3>Processed Text</h3>
+
+                <pre id="processedText"></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Javascript Assignment
+    </div>
+
+</div>
+
+<div class="student-info">
+    <div>Mohit Lilhare</div>
+    <div>PRN 24070521044</div>
+    <div>Batch A2</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
